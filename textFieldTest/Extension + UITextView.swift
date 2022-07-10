@@ -9,30 +9,24 @@ import UIKit
 
 extension  UITextView {
     
-    func mutablePart(of textNSMutable: NSMutableAttributedString, element: String, attributes: [NSAttributedString.Key : Any]) -> NSMutableAttributedString {
+    func mutablePart(element: String, attributes: [NSAttributedString.Key : Any])  {
         
-//        let textTest = NSMutableAttributedString(attributedString: self.attributedText)
-//        let stringTest = textTest.mutableString as String
+        let attributesTextView = NSMutableAttributedString(attributedString: self.attributedText)
+        let stringTextView = attributesTextView.mutableString as String
         
-        let string = textNSMutable.mutableString as String
-        let attributedOriginalText = textNSMutable
-        
-        if string.contains(element) {
-            //        if originalText.contains(element) {
-            //        let attributedOriginalText = NSMutableAttributedString(string: originalText)
-            
+        if stringTextView.contains(element) {
             let array = text.components(separatedBy: element)
             var count = 0
             
             for x in 0...array.count - 2 {
                 count += array[x].count
-                attributedOriginalText.addAttributes(attributes, range: NSRange(location: count, length: element.count))
+                attributesTextView.addAttributes(attributes, range: NSRange(location: count, length: element.count))
                 count += element.count
             }
-//            self.attributedText = attributedOriginalText
         }
-        return attributedOriginalText
+        self.attributedText = attributesTextView
     }
+    
     
     func dynamicFont(string: String, from beginnerValue: CGFloat, step stepFont: CGFloat) {
         let attributedOriginalText = NSMutableAttributedString(string: string)
@@ -49,7 +43,7 @@ extension  UITextView {
         
         self.attributedText = attributedOriginalText
     }
-     
+    
 }
 
 
