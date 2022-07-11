@@ -9,31 +9,29 @@ import UIKit
 
 extension  UITextView {
     
-    func mutablePart(element: String, attributes: [NSAttributedString.Key : Any])  {
+    func mutablePart(element: String, attributes: [NSAttributedString.Key : Any]) {
+        let attributedOriginalText = NSMutableAttributedString(attributedString: self.attributedText)
+        let string = attributedOriginalText.mutableString as String
         
-        let attributesTextView = NSMutableAttributedString(attributedString: self.attributedText)
-        let stringTextView = attributesTextView.mutableString as String
-        
-        if stringTextView.contains(element) {
+        if string.contains(element) {
             let array = text.components(separatedBy: element)
             var count = 0
             
             for x in 0...array.count - 2 {
                 count += array[x].count
-                attributesTextView.addAttributes(attributes, range: NSRange(location: count, length: element.count))
+                attributedOriginalText.addAttributes(attributes, range: NSRange(location: count, length: element.count))
                 count += element.count
             }
         }
-        self.attributedText = attributesTextView
+        self.attributedText = attributedOriginalText
     }
     
-    
-    func dynamicFont(string: String, from beginnerValue: CGFloat, step stepFont: CGFloat) {
-        let attributedOriginalText = NSMutableAttributedString(string: string)
+    func dynamicFont(from beginnerValue: CGFloat, step stepFont: CGFloat) {
+        let attributedOriginalText = NSMutableAttributedString(string: self.text)
         
         var count = 0
         var font = beginnerValue
-        let array = string.components(separatedBy: " ")
+        let array = self.text.components(separatedBy: " ")
         
         for x in array {
             attributedOriginalText.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: font), range: NSRange(location: count, length: x.count))
@@ -43,7 +41,7 @@ extension  UITextView {
         
         self.attributedText = attributedOriginalText
     }
-    
+     
 }
 
 

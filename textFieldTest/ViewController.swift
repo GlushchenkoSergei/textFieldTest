@@ -26,19 +26,18 @@ The first four methods also return by reference the effective range and the long
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = text
-        textView2.dynamicFont(string: text, from: 2, step: 1)
+        textView2.dynamicFont(from: 2, step: 1)
 
         buttonYellow.alpha = 0.2
         buttonGreen.alpha = 0.2
         buttonRed.alpha = 1
     }
 
-  
     @IBAction func button(_ sender: Any) {
         guard let textFromTextField = textField.text else { return }
         
         let attributes = [NSAttributedString.Key.backgroundColor: selectedColor, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
-    
+        
         textView.mutablePart(element: textFromTextField, attributes: attributes)
     }
     
@@ -68,9 +67,7 @@ The first four methods also return by reference the effective range and the long
 extension ViewController: UITextViewDelegate {
     
     func textViewDidChangeSelection(_ textView: UITextView) {
-        print(textView.selectedRange)
         let text = (textView.text! as NSString).substring(with: textView.selectedRange)
-        print(text)
         textField.text = text
     }
     

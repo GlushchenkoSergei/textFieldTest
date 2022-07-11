@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04314E3B287AD84A00A82544 /* Extension + UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04314E3A287AD84A00A82544 /* Extension + UITextView.swift */; };
+		0438AAFB287C23AB0073345E /* TapLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438AAFA287C23AB0073345E /* TapLabelViewController.swift */; };
+		04955A04287C90E300B482F8 /* Extension + UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04955A03287C90E300B482F8 /* Extension + UITextView.swift */; };
+		04955A06287C94AC00B482F8 /* Extension + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04955A05287C94AC00B482F8 /* Extension + UILabel.swift */; };
 		04A24ED9287AC63800CFB3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A24ED8287AC63800CFB3D8 /* AppDelegate.swift */; };
 		04A24EDB287AC63800CFB3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A24EDA287AC63800CFB3D8 /* SceneDelegate.swift */; };
 		04A24EDD287AC63800CFB3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A24EDC287AC63800CFB3D8 /* ViewController.swift */; };
@@ -17,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04314E3A287AD84A00A82544 /* Extension + UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITextView.swift"; sourceTree = "<group>"; };
+		0438AAFA287C23AB0073345E /* TapLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapLabelViewController.swift; sourceTree = "<group>"; };
+		04955A03287C90E300B482F8 /* Extension + UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UITextView.swift"; sourceTree = "<group>"; };
+		04955A05287C94AC00B482F8 /* Extension + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UILabel.swift"; sourceTree = "<group>"; };
 		04A24ED5287AC63800CFB3D8 /* textFieldTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textFieldTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A24ED8287AC63800CFB3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A24EDA287AC63800CFB3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +65,9 @@
 				04A24ED8287AC63800CFB3D8 /* AppDelegate.swift */,
 				04A24EDA287AC63800CFB3D8 /* SceneDelegate.swift */,
 				04A24EDC287AC63800CFB3D8 /* ViewController.swift */,
-				04314E3A287AD84A00A82544 /* Extension + UITextView.swift */,
+				0438AAFA287C23AB0073345E /* TapLabelViewController.swift */,
+				04955A03287C90E300B482F8 /* Extension + UITextView.swift */,
+				04955A05287C94AC00B482F8 /* Extension + UILabel.swift */,
 				04A24EDE287AC63800CFB3D8 /* Main.storyboard */,
 				04A24EE1287AC63B00CFB3D8 /* Assets.xcassets */,
 				04A24EE3287AC63B00CFB3D8 /* LaunchScreen.storyboard */,
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0438AAFB287C23AB0073345E /* TapLabelViewController.swift in Sources */,
 				04A24EDD287AC63800CFB3D8 /* ViewController.swift in Sources */,
+				04955A06287C94AC00B482F8 /* Extension + UILabel.swift in Sources */,
+				04955A04287C90E300B482F8 /* Extension + UITextView.swift in Sources */,
 				04A24ED9287AC63800CFB3D8 /* AppDelegate.swift in Sources */,
-				04314E3B287AD84A00A82544 /* Extension + UITextView.swift in Sources */,
 				04A24EDB287AC63800CFB3D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +308,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,6 +338,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
